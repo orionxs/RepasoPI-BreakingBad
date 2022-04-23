@@ -1,9 +1,14 @@
 import './App.css';
+import {Route} from "react-router-dom";
+import LandingPage from "./components/LandingPage"
+import Home from './components/Home';
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Breaking Bad App</h1>
+    <div>
+    <Route exact path={"/"} render = {() => <LandingPage/>}/> 
+    <Route path={"/home"} render = {() => <Home/>}/>
     </div>
   );
 }
